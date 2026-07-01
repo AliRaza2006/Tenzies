@@ -1,0 +1,20 @@
+{
+  "name": "Scrim-s06j1hm",
+  "description": "https://scrimba.com/learn-react-c0e/~04ao/s08v5kqv0b/head",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "nanoid": "5.0.7",
+    "react": "18.3.1",
+    "react-confetti": "6.1.0",
+    "react-dom": "18.3.1",
+    "vite": "^8.1.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "*"
+  }
+}
