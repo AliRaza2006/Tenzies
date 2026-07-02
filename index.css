@@ -65,8 +65,13 @@ button {
     border-radius: 10px;
     border: none;
     background-color: white;
-    font-size: 1.75rem;
-    font-weight: bold;
+    font-size: 2rem;
+    font-weight:bolder;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    place-content: center;
+    place-items: center;
 }
 
 button.roll-dice {
@@ -80,7 +85,13 @@ button.roll-dice {
     color: white;
     font-size: 1.2rem;
 }
-
+.dot {
+    width: 8px;
+    height: 8px;
+    background: black;
+    border-radius: 50%;
+    display: block;
+}
 .sr-only {
     position: absolute;
     width: 1px;
