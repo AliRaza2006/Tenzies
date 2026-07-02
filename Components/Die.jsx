@@ -23,9 +23,9 @@ export default function Die(props) {
                 for(let i=0;i<9;i++)
                 {
                     if(pattern[props.value].includes(i))
-                    spans.push(<span className="dot"></span>)
+                    spans.push(<span className="dot" key={i}></span>)
                     else
-                    spans.push(<span></span>)   
+                    spans.push(<span key={i}></span>)   
                 }
                 return spans
             })()}
