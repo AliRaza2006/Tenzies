@@ -7,6 +7,7 @@ export default function App() {
     const [dice, setDice] = useState(() => generateAllNewDice())
     const [time,setTime]=useState(0)
     const [bestTime,setBestTime]=useState(Number(localStorage.getItem("best"))||0)
+    const [rolls,setRolls]=useState(0)
     const buttonRef = useRef(null)
 
     const gameWon = dice.every(die => die.isHeld) &&
@@ -50,12 +51,14 @@ export default function App() {
     
     function rollDice() {
         if (!gameWon) {
+            setRolls((prevRolls)=>prevRolls+1)
             setDice(oldDice => oldDice.map(die =>
                 die.isHeld ?
                     die :
                     { ...die, value: Math.ceil(Math.random() * 6) }
             ))
         } else {
+            setRolls(0)
             setTime(0)
             setDice(generateAllNewDice())
         }
@@ -88,6 +91,7 @@ export default function App() {
             <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
             <div className="timers">
                 <p>Time: {time}s </p>
+                <p>Rolls: {rolls}</p>
                 <p>Best Time: {bestTime}s</p>
             </div>
             <div className="dice-container">

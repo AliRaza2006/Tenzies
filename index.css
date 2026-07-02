@@ -94,9 +94,10 @@ button.roll-dice {
 }
 .timers
 {
-    display: flex;
-    flex-direction: row;
-    gap: 5em;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
 }
